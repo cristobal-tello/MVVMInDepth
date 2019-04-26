@@ -31,9 +31,6 @@ namespace _02.SampleApp.OnlyBinding.Customers
        
         public async void OnSaveAsync(object sender, RoutedEventArgs e)
         {
-            customer.FirstName = firstNameTextBox.Text;
-            customer.LastName = lastNameTextBox.Text;
-            customer.Phone = phoneTextBox.Text;
             await customerRepository.UpdateCustomerAsync(customer);
         }
 
@@ -44,13 +41,7 @@ namespace _02.SampleApp.OnlyBinding.Customers
                 return;
             }
             customer = await customerRepository.GetCustomerAsync(CustomerId);
-            if (customer == null)
-            {
-                return;
-            }
-            firstNameTextBox.Text = customer.FirstName;
-            lastNameTextBox.Text = customer.LastName;
-            phoneTextBox.Text = customer.Phone;
+            DataContext = customer;
         }
     }
 }

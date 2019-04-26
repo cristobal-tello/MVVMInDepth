@@ -8,6 +8,6 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Customers:CustomerEditView></Customers:CustomerEditView>
+        <Customers:CustomerEditView CustomerId="342ffcb6-211f-49ae-bae5-26cb2e1ca63b"></Customers:CustomerEditView> 
     </Grid>
 </Window>

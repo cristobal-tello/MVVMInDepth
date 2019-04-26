@@ -11,7 +11,30 @@ namespace Sample.Services
 
         public CustomersRepository()
         {
-            context = new List<Customer>();
+            context = new List<Customer>()
+            {
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca63b"),
+                    FirstName = "Frank",
+                    LastName = "Sinatra",
+                    Phone = "555-124124"
+                },
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca64c"),
+                    FirstName = "Robert",
+                    LastName = "Duvall",
+                    Phone = "432-678225"
+                },
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65e"),
+                    FirstName = "Charlton",
+                    LastName = "Heston",
+                    Phone = "982-976781"
+                }
+            };
         }
 
         public async Task<Customer> AddCustomerAsync(Customer customer)

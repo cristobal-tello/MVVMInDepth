@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Services", "Sample.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01.Sample.App.NoMVVM.NoBinding", "01.Sample.App.NoMVVM.NoBinding\01.Sample.App.NoMVVM.NoBinding.csproj", "{D9BAAC63-43E2-42E8-A1A2-CD5A53BA32AA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.SampleApp.OnlyBinding", "02.SampleApp.OnlyBinding\02.SampleApp.OnlyBinding.csproj", "{3760E9EB-B647-444E-85EA-278625A679B8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{D9BAAC63-43E2-42E8-A1A2-CD5A53BA32AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9BAAC63-43E2-42E8-A1A2-CD5A53BA32AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9BAAC63-43E2-42E8-A1A2-CD5A53BA32AA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3760E9EB-B647-444E-85EA-278625A679B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3760E9EB-B647-444E-85EA-278625A679B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3760E9EB-B647-444E-85EA-278625A679B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3760E9EB-B647-444E-85EA-278625A679B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

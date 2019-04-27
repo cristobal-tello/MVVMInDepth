@@ -5,7 +5,7 @@ using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace _02.SampleApp.OnlyBinding.Customers
+namespace _02.Sample.App.OnlyBinding.Customers
 {
     /// <summary>
     /// Interaction logic for CustomerEditView.xaml

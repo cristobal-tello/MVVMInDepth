@@ -58,7 +58,12 @@ namespace Sample.Services
 
         public async Task<List<Customer>> GetCustomersAsync()
         {
-            return await Task.Run(()=> context);
+            return await Task.Run(() => { return context; });
+        }
+
+        public List<Customer> GetCustomers()
+        {
+            return context;
         }
 
         public async Task<Customer> UpdateCustomerAsync(Customer customer)

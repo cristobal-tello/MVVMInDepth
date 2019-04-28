@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03.Sample.App.MVVM", "03.Sa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.Sample.App.OnlyBinding", "02.Sample.App.OnlyBinding\02.Sample.App.OnlyBinding.csproj", "{3760E9EB-B647-444E-85EA-278625A679B8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04.Sample.App.ViewFirst.MVVM", "04.Sample.App.ViewFirst.MVVM\04.Sample.App.ViewFirst.MVVM.csproj", "{69247DB5-4846-4970-B007-DADEB2ACF079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{3760E9EB-B647-444E-85EA-278625A679B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3760E9EB-B647-444E-85EA-278625A679B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3760E9EB-B647-444E-85EA-278625A679B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69247DB5-4846-4970-B007-DADEB2ACF079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69247DB5-4846-4970-B007-DADEB2ACF079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69247DB5-4846-4970-B007-DADEB2ACF079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69247DB5-4846-4970-B007-DADEB2ACF079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,14 +1,11 @@
-﻿using Sample.Data;
+﻿using _04.Sample.App.MVVM;
+using Sample.Data;
 using Sample.Services;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace _03.Sample.App.MVVM.Customers
+namespace _04.Sample.App.ViewFirst.MVVM.ViewModel
 {
     public class CustomerEditViewModel : INotifyPropertyChanged
     {
@@ -40,8 +37,6 @@ namespace _03.Sample.App.MVVM.Customers
 
         public async void OnSaveAsync()
         {
-            var x = customerRepository.GetCustomersAsync().Result;
-
             Customer = await customerRepository.UpdateCustomerAsync(customer);
         }
 

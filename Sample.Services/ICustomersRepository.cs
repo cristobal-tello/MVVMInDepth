@@ -12,5 +12,6 @@ namespace Sample.Services
         Task<Customer> AddCustomerAsync(Customer customer);
         Task<Customer> UpdateCustomerAsync(Customer customer);
         Task DeleteCustomerAsync(Customer customer);
+        List<Customer> GetCustomers();
     }
 }

@@ -40,8 +40,6 @@ namespace _03.Sample.App.MVVM.Customers
 
         public async void OnSaveAsync()
         {
-            var x = customerRepository.GetCustomersAsync().Result;
-
             Customer = await customerRepository.UpdateCustomerAsync(customer);
         }
 

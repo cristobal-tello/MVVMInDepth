@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{69247DB5-4846-4970-B007-DADEB2ACF079}</ProjectGuid>
+    <ProjectGuid>{87A350F0-7D5F-4412-9C63-297753297C43}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>_04.Sample.App.ViewFirst.MVVM</RootNamespace>
-    <AssemblyName>04.Sample.App.ViewFirst.MVVM</AssemblyName>
+    <RootNamespace>_07.Sample.App.MVVM.ViewModel.First.WithTemplates</RootNamespace>
+    <AssemblyName>07.Sample.App.MVVM.ViewModel.First.WithTemplates</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -35,14 +35,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Blend.Interctivity.WPF.v4.0.1.0.3\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Blend.Interctivity.WPF.v4.0.1.0.3\lib\net40\System.Windows.Interactivity.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -61,18 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Customers\CustomerListView.xaml.cs">
-      <DependentUpon>CustomerListView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Customers\CustomerListViewModel.cs" />
-    <Compile Include="RelayCommand.cs" />
-    <Page Include="Customers\CustomerEditView.xaml">
+    <Page Include="Customers\Views\CustomerListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Customers\CustomerListView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -82,10 +67,10 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Customers\CustomerEditView.xaml.cs">
-      <DependentUpon>CustomerEditView.xaml</DependentUpon>
+    <Compile Include="Customers\ViewModels\CustomerListViewModel.cs" />
+    <Compile Include="Customers\Views\CustomerListView.xaml.cs">
+      <DependentUpon>CustomerListView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Customers\CustomerEditViewModel.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -109,7 +94,6 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -117,16 +101,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Sample.Data\Sample.Data.csproj">
-      <Project>{D6ED108B-0831-49F4-A984-FEB69356B638}</Project>
-      <Name>Sample.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Sample.Services\Sample.Services.csproj">
-      <Project>{A3828D35-24FD-4CE4-968C-0B6C889C4976}</Project>
-      <Name>Sample.Services</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

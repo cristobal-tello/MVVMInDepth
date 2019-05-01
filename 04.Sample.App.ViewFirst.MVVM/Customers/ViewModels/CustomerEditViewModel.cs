@@ -5,7 +5,7 @@ using System;
 using System.ComponentModel;
 using System.Windows.Input;
 
-namespace _04.Sample.App.ViewFirst.MVVM.ViewModel
+namespace _04.Sample.App.MVVM.ViewFirst.Customers.ViewModels
 {
     public class CustomerEditViewModel : INotifyPropertyChanged
     {

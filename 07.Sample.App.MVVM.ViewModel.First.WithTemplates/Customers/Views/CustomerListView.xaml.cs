@@ -1,7 +1,6 @@
-﻿using _06.Sample.App.MVVM.DataBindings.DataFlows.Customers.ViewModels;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 
-namespace _06.Sample.App.MVVM.DataBindings.DataFlows.Customers.Views
+namespace _07.Sample.App.MVVM.ViewModel.First.WithTemplates.Customers.Views
 {
     /// <summary>
     /// Interaction logic for CustomerListView.xaml
@@ -10,7 +9,6 @@ namespace _06.Sample.App.MVVM.DataBindings.DataFlows.Customers.Views
     {
         public CustomerListView()
         {
-            this.DataContext = new CustomerListViewModel();
             InitializeComponent();
         }
     }

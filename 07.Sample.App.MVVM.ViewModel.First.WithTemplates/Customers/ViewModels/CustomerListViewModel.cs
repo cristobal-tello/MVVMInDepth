@@ -3,7 +3,7 @@ using Sample.Services;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 
-namespace _06.Sample.App.MVVM.DataBindings.DataFlows.Customers.ViewModels
+namespace _07.Sample.App.MVVM.ViewModel.First.WithTemplates.Customers.ViewModels
 {
     public class CustomerListViewModel
     {

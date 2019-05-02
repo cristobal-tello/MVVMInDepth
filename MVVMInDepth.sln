@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06.Sample.App.MVVM.DataBind
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "07.Sample.App.MVVM.ViewModel.First.WithTemplates", "07.Sample.App.MVVM.ViewModel.First.WithTemplates\07.Sample.App.MVVM.ViewModel.First.WithTemplates.csproj", "{87A350F0-7D5F-4412-9C63-297753297C43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Sample.App.MVVM.ImplicitTemplates", "08.Sample.App.MVVM.ImplicitTemplates\08.Sample.App.MVVM.ImplicitTemplates.csproj", "{004F8991-A8D1-46DB-9144-BF590DEA2930}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{87A350F0-7D5F-4412-9C63-297753297C43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{87A350F0-7D5F-4412-9C63-297753297C43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87A350F0-7D5F-4412-9C63-297753297C43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{004F8991-A8D1-46DB-9144-BF590DEA2930}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{004F8991-A8D1-46DB-9144-BF590DEA2930}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{004F8991-A8D1-46DB-9144-BF590DEA2930}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{004F8991-A8D1-46DB-9144-BF590DEA2930}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

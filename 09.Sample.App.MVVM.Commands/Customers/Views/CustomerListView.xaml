@@ -1,0 +1,67 @@
+﻿<UserControl x:Class="Sample.App.MVVM.Customers.Views.CustomerListView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:data="clr-namespace:Sample.Data;assembly=Sample.Data"
+             xmlns:local="clr-namespace:Sample.App.MVVM.Customers.ViewModels"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.InputBindings>
+        <KeyBinding Key="D" Modifiers="Ctrl" Command="{Binding DeleteCommand}" />
+    </UserControl.InputBindings>
+    <UserControl.DataContext>
+        <local:CustomerListViewModel></local:CustomerListViewModel>
+    </UserControl.DataContext>
+    <UserControl.Resources>
+        <DataTemplate DataType="{x:Type data:Customer}"> <!-- Use it if you want to use implicit templates -->
+            <StackPanel>
+                <TextBlock Text="{Binding FirstName}" />
+                <TextBlock Text="{Binding LastName}" />
+                <TextBlock Text="{Binding Phone}" />
+            </StackPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Button 
+            Content="Delete" 
+            Command="{Binding DeleteCommand}"
+            HorizontalAlignment="Left" 
+            VerticalAlignment="Top" 
+            Width="75" />
+        <DataGrid
+            Grid.Row="1"
+            x:Name="customerDataGrid"
+            AutoGenerateColumns="False"
+            EnableRowVirtualization="True"
+            ItemsSource="{Binding Customers}"
+            SelectedItem="{Binding SelectedCustomer}"
+            RowDetailsVisibilityMode="VisibleWhenSelected">
+            <DataGrid.Columns>
+                <DataGridTextColumn 
+                    x:Name="firstNameColum"
+	                Binding="{Binding FirstName}"
+	                Header="First Name"
+	                Width="SizeToHeader" />
+                <DataGridTextColumn 
+                    x:Name="lastNameColum"
+	                Binding="{Binding LastName}"
+	                Header="Last Name"
+	                Width="SizeToHeader" />
+                <DataGridTextColumn 
+                    x:Name="phoneColum"
+	                Binding="{Binding Phone}"
+	                Header="Phone Number"
+	                Width="SizeToHeader" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <ListBox 
+	        Grid.Row="2" 
+            ItemsSource="{Binding Customers}" />
+    </Grid>
+</UserControl>

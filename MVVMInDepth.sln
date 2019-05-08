@@ -25,6 +25,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "08.Sample.App.MVVM.Implicit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "09.Sample.App.MVVM.Commands", "09.Sample.App.MVVM.Commands\09.Sample.App.MVVM.Commands.csproj", "{007884DC-8889-404F-925E-47A70DAA6738}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Sample.App.MVVM.AttachedAndBehaviors", "10.Sample.App.MVVM.AttachedAndBehaviors\10.Sample.App.MVVM.AttachedAndBehaviors.csproj", "{83D14D0D-4794-4C50-BDCC-E2531B5E7027}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -75,6 +77,10 @@ Global
 		{007884DC-8889-404F-925E-47A70DAA6738}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{007884DC-8889-404F-925E-47A70DAA6738}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{007884DC-8889-404F-925E-47A70DAA6738}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83D14D0D-4794-4C50-BDCC-E2531B5E7027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83D14D0D-4794-4C50-BDCC-E2531B5E7027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83D14D0D-4794-4C50-BDCC-E2531B5E7027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83D14D0D-4794-4C50-BDCC-E2531B5E7027}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

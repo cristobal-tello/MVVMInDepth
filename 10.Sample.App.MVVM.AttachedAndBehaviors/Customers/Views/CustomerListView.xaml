@@ -4,9 +4,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:data="clr-namespace:Sample.Data;assembly=Sample.Data"
+             xmlns:behavior="clr-namespace:Sample.App.MVVM"
              xmlns:local="clr-namespace:Sample.App.MVVM.Customers.ViewModels"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800"
+             behavior:MvvmBehaviours.LoadedMethodName="LoadCustomers">
     <UserControl.InputBindings>
         <KeyBinding Key="D" Modifiers="Ctrl" Command="{Binding DeleteCommand}" />
     </UserControl.InputBindings>

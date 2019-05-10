@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10.Sample.App.MVVM.Attached
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Sample.App.AttachedBehaviors.Blend", "11.Sample.App.AttachedBehaviors.Blend\11.Sample.App.AttachedBehaviors.Blend.csproj", "{2ACF4462-A738-48B9-B2BF-059A08106B30}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Sample.App.CustomBehaviourWithNotifyChange", "12.Sample.App.CustomBehaviourWithNotifyChange\12.Sample.App.CustomBehaviourWithNotifyChange.csproj", "{EA272879-C847-4825-AFD3-092D0890E115}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{2ACF4462-A738-48B9-B2BF-059A08106B30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2ACF4462-A738-48B9-B2BF-059A08106B30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2ACF4462-A738-48B9-B2BF-059A08106B30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EA272879-C847-4825-AFD3-092D0890E115}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA272879-C847-4825-AFD3-092D0890E115}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA272879-C847-4825-AFD3-092D0890E115}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA272879-C847-4825-AFD3-092D0890E115}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

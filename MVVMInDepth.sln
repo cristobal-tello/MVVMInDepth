@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11.Sample.App.AttachedBehav
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "12.Sample.App.CustomBehaviourWithNotifyChange", "12.Sample.App.CustomBehaviourWithNotifyChange\12.Sample.App.CustomBehaviourWithNotifyChange.csproj", "{EA272879-C847-4825-AFD3-092D0890E115}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "13.SampleApp.MVVM.Part1", "13.SampleApp.MVVM.Part1\13.SampleApp.MVVM.Part1.csproj", "{4F7117CC-F37B-41B4-951F-DE573DEE306F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{EA272879-C847-4825-AFD3-092D0890E115}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA272879-C847-4825-AFD3-092D0890E115}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA272879-C847-4825-AFD3-092D0890E115}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F7117CC-F37B-41B4-951F-DE573DEE306F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F7117CC-F37B-41B4-951F-DE573DEE306F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F7117CC-F37B-41B4-951F-DE573DEE306F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F7117CC-F37B-41B4-951F-DE573DEE306F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

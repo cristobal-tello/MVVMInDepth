@@ -7,49 +7,76 @@ namespace Sample.Services
 {
     public class OrderRepository : IOrderRepository
     {
-        public Task<Order> AddOrderAsync(Order order)
+        private readonly List<Order> listOrderContext;
+        private readonly List<Product> listProductContext;
+        private readonly List<ProductOptions> listProductOptionsContext;
+        private readonly List<ProductSize> listProductSizeContext;
+        private readonly List<ProductStatus> listProductStatusContext;
+
+        public OrderRepository()
         {
-            throw new NotImplementedException();
+            listOrderContext = new List<Order>();
+            listProductContext = new List<Product>();
+            listProductOptionsContext = new List<ProductOptions>();
+            listProductSizeContext = new List<ProductSize>();
+            listProductStatusContext = new List<ProductStatus>();
         }
 
-        public Task DeleteOrderAsync(Order order)
+        public async Task<Order> AddOrderAsync(Order order)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() =>
+            {
+                listOrderContext.Add(order);
+                return order;
+            });
         }
 
-        public Task<List<Order>> GetAllOrdersAsync()
+        public async Task DeleteOrderAsync(Order order)
         {
-            throw new NotImplementedException();
+            await Task.Run(() => listOrderContext.Remove(order));
         }
 
-        public Task<List<Order>> GetOrdersForCustomerAsync(Guid customerId)
+        public async Task<List<Order>> GetAllOrdersAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listOrderContext);
         }
 
-        public Task<List<ProductOptions>> GetProductOptionsAsync()
+        public async Task<List<Order>> GetOrdersForCustomerAsync(Guid customerId)
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listOrderContext.FindAll(c => c.CustomerId == customerId));
         }
 
-        public Task<List<Product>> GetProductsAsync()
+        public async Task<List<ProductOptions>> GetProductOptionsAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listProductOptionsContext);
         }
 
-        public Task<List<ProductSize>> GetProductSizesAsync()
+        public async Task<List<Product>> GetProductsAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listProductContext);
         }
 
-        public Task<List<ProductStatus>> GetProductStatusesAsync()
+        public async Task<List<ProductSize>> GetProductSizesAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listProductSizeContext);
         }
 
-        public Task<Order> UpdateOrderAsync(Order order)
+        public async Task<List<ProductStatus>> GetProductStatusesAsync()
         {
-            throw new NotImplementedException();
+            return await Task.Run(() => listProductStatusContext);
+        }
+
+        public async Task<Order> UpdateOrderAsync(Order order)
+        {
+            return await Task.Run(() =>
+            {
+                var index = listOrderContext.FindIndex(c => c.Id == order.Id);
+                if (index >= 0)
+                {
+                    listOrderContext[index] = order;
+                }
+                return (index >= 0) ? order : null;
+            });
         }
     }
 }

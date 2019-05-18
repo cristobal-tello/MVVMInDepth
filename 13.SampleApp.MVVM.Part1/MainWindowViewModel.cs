@@ -1,4 +1,5 @@
-﻿using Sample.App.MVVM;
+﻿using System;
+using Sample.App.MVVM;
 using Sample.App.MVVM.Customers.ViewModels;
 using Sample.App.MVVM.OrderPrep.ViewModels;
 using Sample.App.MVVM.Orders.ViewModels;
@@ -21,6 +22,7 @@ namespace Sample.App
 
             NavigationCommand = new RelayCommand<string>(OnNavigation);
 
+            customerListViewModel.PlaceOrderRequested += PlaceOrderRequested;
             CurrentViewModel = customerListViewModel;
         }
 
@@ -40,11 +42,18 @@ namespace Sample.App
                     break;
                 case "orderprep":
                     CurrentViewModel = orderPrepViewModel;
-                    break;
+                    break; 
                 case "orders":
                     CurrentViewModel = orderViewModel;
                     break;
             }
         }
+
+        private void PlaceOrderRequested(Guid customerId)
+        {
+            orderViewModel.CustomerId = customerId;
+            CurrentViewModel = orderViewModel;
+        }
+
     }
 }

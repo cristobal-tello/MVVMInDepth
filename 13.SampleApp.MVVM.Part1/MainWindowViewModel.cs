@@ -3,6 +3,7 @@ using Sample.App.MVVM;
 using Sample.App.MVVM.Customers.ViewModels;
 using Sample.App.MVVM.OrderPrep.ViewModels;
 using Sample.App.MVVM.Orders.ViewModels;
+using Sample.Data;
 
 namespace Sample.App
 {
@@ -11,6 +12,7 @@ namespace Sample.App
         private readonly CustomerListViewModel customerListViewModel;
         private readonly OrderViewModel orderViewModel;
         private readonly OrderPrepViewModel orderPrepViewModel;
+        private readonly AddEditCustomerViewModel addEditCustomerViewModel;
 
         public RelayCommand<string> NavigationCommand { get; private set; }
 
@@ -19,10 +21,13 @@ namespace Sample.App
             customerListViewModel = new CustomerListViewModel();
             orderViewModel = new OrderViewModel();
             orderPrepViewModel = new OrderPrepViewModel();
+            addEditCustomerViewModel = new AddEditCustomerViewModel();
 
             NavigationCommand = new RelayCommand<string>(OnNavigation);
 
             customerListViewModel.PlaceOrderRequested += PlaceOrderRequested;
+            customerListViewModel.AddCustomerResquested += AddCustomerResquested;
+            customerListViewModel.EditCustomerRequested += EditCustomerRequested;
             CurrentViewModel = customerListViewModel;
         }
 
@@ -55,5 +60,19 @@ namespace Sample.App
             CurrentViewModel = orderViewModel;
         }
 
+        private void EditCustomerRequested(Customer customer)
+        {
+            addEditCustomerViewModel.EditMode = true;
+            addEditCustomerViewModel.SetCustomer(customer);
+            CurrentViewModel = addEditCustomerViewModel;
+
+        }
+
+        private void AddCustomerResquested(Customer customer)
+        {
+            addEditCustomerViewModel.EditMode = false;
+            addEditCustomerViewModel.SetCustomer(customer);
+            CurrentViewModel = addEditCustomerViewModel;
+        }
     }
 }

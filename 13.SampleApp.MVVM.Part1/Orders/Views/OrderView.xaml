@@ -10,6 +10,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <TextBlock Text="Order View" HorizontalAlignment="Center" />
+        <StackPanel 
+            Orientation="Horizontal">
+            <TextBlock Text="CustomerID : " />
+            <TextBlock Text="{Binding CustomerId}" />
+        </StackPanel>
     </Grid>
 </UserControl>

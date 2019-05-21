@@ -23,23 +23,39 @@ namespace Sample.App.MVVM.Customers.ViewModels
         }
 
         public RelayCommand<Customer> PlaceOrderCommand { get; private set; }
+        public RelayCommand AddCustomerCommand { get; private set; }
+        public RelayCommand<Customer> EditCustomerCommand { get; private set; }
+
+        public event Action<Guid> PlaceOrderRequested = delegate { };
+        public event Action<Customer> AddCustomerResquested = delegate { };
+        public event Action<Customer> EditCustomerRequested = delegate { };
 
         public CustomerListViewModel()
         {
             customersRepository = new CustomersRepository();
+            PlaceOrderCommand = new RelayCommand<Customer>(OnPlaceOrder);
+            AddCustomerCommand = new RelayCommand(OnAddCustomer);
+            EditCustomerCommand = new RelayCommand<Customer>(OnEditCustomer);
         }
 
         public void LoadCustomers()
         {
             Customers = new ObservableCollection<Customer>(customersRepository.GetCustomers());
-            PlaceOrderCommand = new RelayCommand<Customer>(OnPlaceOrder);
         }
-
-        public event Action<Guid> PlaceOrderRequested = delegate { };
 
         private void OnPlaceOrder(Customer customer)
         {
             PlaceOrderRequested(customer.Id);
+        }
+
+        private void OnAddCustomer()
+        {
+            AddCustomerResquested(new Customer() { Id = Guid.NewGuid() });
+        }
+
+        private void OnEditCustomer(Customer customer)
+        {
+            EditCustomerRequested(customer);
         }
     }
 }

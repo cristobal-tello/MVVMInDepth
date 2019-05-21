@@ -57,6 +57,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Customers\ViewModels\AddEditCustomerViewModel.cs" />
+    <Compile Include="Customers\Views\AddEditCustomerView.xaml.cs">
+      <DependentUpon>AddEditCustomerView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="OrderPrep\ViewModels\OrderPrepViewModel.cs" />
     <Compile Include="OrderPrep\Views\OrderPrepView.xaml.cs">
       <DependentUpon>OrderPrepView.xaml</DependentUpon>
@@ -67,6 +71,10 @@
     </Compile>
     <Compile Include="ViewModelBase.cs" />
     <Compile Include="RelayCommand.cs" />
+    <Page Include="Customers\Views\AddEditCustomerView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Customers\Views\CustomerListView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

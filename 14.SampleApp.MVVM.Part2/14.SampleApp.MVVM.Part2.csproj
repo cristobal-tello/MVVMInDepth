@@ -65,6 +65,7 @@
     <Compile Include="Customers\Views\CustomerListView.xaml.cs">
       <DependentUpon>CustomerListView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Customers\Helpers\SimpleEditableCustomer.cs" />
     <Compile Include="MainWindowViewModel.cs" />
     <Compile Include="OrderPrep\ViewModels\OrderPrepViewModel.cs" />
     <Compile Include="OrderPrep\Views\OrderPrepView.xaml.cs">
@@ -123,6 +124,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\Sample.Data.Customer.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

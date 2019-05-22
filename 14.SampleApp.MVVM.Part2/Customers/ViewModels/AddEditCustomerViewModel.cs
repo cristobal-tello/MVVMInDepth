@@ -1,4 +1,5 @@
-﻿using Sample.Data;
+﻿using _14.SampleApp.MVVM.Part2.Customers.Helpers;
+using Sample.Data;
 using Sample.Services;
 
 namespace Sample.App.MVVM.Customers.ViewModels
@@ -24,6 +25,26 @@ namespace Sample.App.MVVM.Customers.ViewModels
         public void SetCustomer(Customer cust)
         {
             customer = cust;
+            simpleEditableCustomer = new SimpleEditableCustomer()
+            {
+                Id = cust.Id,
+                FirstName = cust.FirstName,
+                LastName = cust.LastName,
+                Phone = cust.Phone
+            };
+        }
+        
+        private SimpleEditableCustomer simpleEditableCustomer;
+        public SimpleEditableCustomer Customer
+        {
+            get
+            {
+                return simpleEditableCustomer;
+            }
+            set
+            {
+                SetProperty(ref simpleEditableCustomer, value);
+            }
         }
 
         public RelayCommand<Customer> PlaceOrderCommand { get; private set; }

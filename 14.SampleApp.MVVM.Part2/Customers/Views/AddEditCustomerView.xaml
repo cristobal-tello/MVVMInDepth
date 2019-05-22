@@ -3,10 +3,63 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Data="clr-namespace:Sample.Data;assembly=Sample.Data"
     x:Class="Sample.App.MVVM.Customers.Views.AddEditCustomerView"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="450" d:DesignWidth="800" >
     <Grid>
-        <TextBlock Text="Add / Edit Customer View" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid 
+            x:Name="grid1" 
+            VerticalAlignment="Top" 
+            Margin="20,20" 
+            HorizontalAlignment="Left" 
+            DataContext="{Binding Customer}" 
+            Height="95" 
+            Width="300">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="0" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="First Name:"/>
+            <TextBox x:Name="firstNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding FirstName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="1" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Last Name:"/>
+            <TextBox x:Name="lastNameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding LastName, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="2" Margin="3" HorizontalAlignment="Left" Grid.Column="0" Content="Phone:"/>
+            <TextBox x:Name="phoneTextBox" Width="120" VerticalAlignment="Center" Text="{Binding Phone, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Height="23" HorizontalAlignment="Left" Grid.Column="1"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Button 
+                Content="Save"
+                Command="{Binding SaveCommand}"
+                Visibility="{Binding SaveSensibility}"
+                HorizontalAlignment="Left"
+                Margin="25,5,0,0"
+                VerticalAlignment="Top"
+                Width="75" />
+            <Button 
+                Content="Add"
+                Command="{Binding SaveCommand}"
+                HorizontalAlignment="Left"
+                Margin="25,5,0,0"
+                VerticalAlignment="Top"
+                Width="75" />
+            <Button 
+                Content="Cancel"
+                Command="{Binding CancelCommand}"
+                HorizontalAlignment="Left"
+                Margin="150,5,0,0"
+                VerticalAlignment="Top"
+                Width="75" />
+
+        </Grid>
     </Grid>
 </UserControl>

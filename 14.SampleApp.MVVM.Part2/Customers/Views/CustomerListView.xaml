@@ -36,6 +36,10 @@
                 <DataGridTextColumn 
                     Binding="{Binding FirstName}"
                     Width="*"/>
+                <DataGridTextColumn 
+                    Binding="{Binding LastName}"
+                    Width="*"/>
+
                 <DataGridTemplateColumn
                     Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>

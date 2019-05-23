@@ -1,4 +1,5 @@
-﻿using _14.SampleApp.MVVM.Part2.Customers.Helpers;
+﻿using System;
+using _14.SampleApp.MVVM.Part2.Customers.Helpers;
 using Sample.Data;
 using Sample.Services;
 
@@ -47,12 +48,33 @@ namespace Sample.App.MVVM.Customers.ViewModels
             }
         }
 
-        public RelayCommand<Customer> PlaceOrderCommand { get; private set; }
+        public RelayCommand CancelCommand { get; private set; }
+        public RelayCommand SaveCommand { get; private set; }
 
         public AddEditCustomerViewModel()
         {
             customer = null;
             customersRepository = new CustomersRepository();
+            CancelCommand = new RelayCommand(OnCancel);
+            SaveCommand = new RelayCommand(OnSave, CanSave);
+
+        }
+
+        public event Action Done = delegate { };
+
+        private bool CanSave()
+        {
+            return true;
+        }
+
+        private void OnSave()
+        {
+            Done();
+        }
+
+        private void OnCancel()
+        {
+            Done();
         }
     }
 }

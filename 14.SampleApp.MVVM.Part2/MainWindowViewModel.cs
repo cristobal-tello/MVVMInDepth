@@ -28,6 +28,13 @@ namespace Sample.App
             customerListViewModel.PlaceOrderRequested += PlaceOrderRequested;
             customerListViewModel.AddCustomerResquested += AddCustomerResquested;
             customerListViewModel.EditCustomerRequested += EditCustomerRequested;
+            addEditCustomerViewModel.Done += EditDoneResqueted;
+
+            CurrentViewModel = customerListViewModel;
+        }
+
+        private void EditDoneResqueted()
+        {
             CurrentViewModel = customerListViewModel;
         }
 

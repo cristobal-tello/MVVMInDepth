@@ -30,9 +30,9 @@ namespace Sample.App.MVVM.Customers.ViewModels
         public event Action<Customer> AddCustomerResquested = delegate { };
         public event Action<Customer> EditCustomerRequested = delegate { };
 
-        public CustomerListViewModel()
+        public CustomerListViewModel(ICustomersRepository customersRepo)
         {
-            customersRepository = new CustomersRepository();
+            customersRepository = customersRepo;
             PlaceOrderCommand = new RelayCommand<Customer>(OnPlaceOrder);
             AddCustomerCommand = new RelayCommand(OnAddCustomer);
             EditCustomerCommand = new RelayCommand<Customer>(OnEditCustomer);

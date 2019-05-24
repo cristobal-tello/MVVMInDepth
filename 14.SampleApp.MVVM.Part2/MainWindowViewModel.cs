@@ -4,6 +4,7 @@ using Sample.App.MVVM.Customers.ViewModels;
 using Sample.App.MVVM.OrderPrep.ViewModels;
 using Sample.App.MVVM.Orders.ViewModels;
 using Sample.Data;
+using Sample.Services;
 
 namespace Sample.App
 {
@@ -18,10 +19,12 @@ namespace Sample.App
 
         public MainWindowViewModel()
         {
-            customerListViewModel = new CustomerListViewModel();
+            ICustomersRepository customersRepository = new CustomersRepository();
+
+            customerListViewModel = new CustomerListViewModel(customersRepository);
             orderViewModel = new OrderViewModel();
             orderPrepViewModel = new OrderPrepViewModel();
-            addEditCustomerViewModel = new AddEditCustomerViewModel();
+            addEditCustomerViewModel = new AddEditCustomerViewModel(customersRepository);
 
             NavigationCommand = new RelayCommand<string>(OnNavigation);
 

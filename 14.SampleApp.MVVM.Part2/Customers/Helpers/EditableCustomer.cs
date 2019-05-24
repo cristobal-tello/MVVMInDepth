@@ -1,9 +1,10 @@
 ﻿using Sample.App;
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace _14.SampleApp.MVVM.Part2.Customers.Helpers
 {
-    public class SimpleEditableCustomer: ViewModelBase
+    public class EditableCustomer: ValidateViewModelBase
     {
         private Guid id;
         public Guid Id
@@ -19,6 +20,7 @@ namespace _14.SampleApp.MVVM.Part2.Customers.Helpers
         }
 
         private string firstName;
+        [Required]
         public string FirstName
         {
             get
@@ -32,6 +34,7 @@ namespace _14.SampleApp.MVVM.Part2.Customers.Helpers
         }
 
         private string lastName;
+        [Required]
         public string LastName
         {
             get
@@ -45,6 +48,7 @@ namespace _14.SampleApp.MVVM.Part2.Customers.Helpers
         }
 
         private string phone;
+        [Phone]
         public string Phone
         {
             get

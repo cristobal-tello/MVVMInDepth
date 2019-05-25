@@ -12,7 +12,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <i:Interaction.Triggers>
         <i:EventTrigger EventName="Loaded">
-            <ei:CallMethodAction TargetObject="{Binding}" MethodName="LoadCustomers"/>
+            <ei:CallMethodAction TargetObject="{Binding}" MethodName="LoadCustomers" />
         </i:EventTrigger>
     </i:Interaction.Triggers>
     <Grid>
@@ -20,15 +20,32 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Button 
+            Grid.Column="0"
+            Content="Add Customer"
+            Command="{Binding AddCustomerCommand}"
+            HorizontalAlignment="Left" />
+        <StackPanel 
+            Grid.Column="1"
+            Orientation="Horizontal" 
+            HorizontalAlignment="Right">
+            <Label 
+                Content="Search" />
+            <TextBox
+                Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"
+                Width="150" />
             <Button 
-                Content="Add Customer"
-                Command="{Binding AddCustomerCommand}"
-                HorizontalAlignment="Left" />
-        </Grid>
-        
+                Content="Clear"
+                Command="{Binding ClearSearchCommand}" />
+
+        </StackPanel>
         <DataGrid
             Grid.Row="1"
+            Grid.ColumnSpan="2"
             ItemsSource="{Binding Customers}"
             AutoGenerateColumns="False"
             CanUserAddRows="False">

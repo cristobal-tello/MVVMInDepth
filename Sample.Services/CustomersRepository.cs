@@ -16,8 +16,8 @@ namespace Sample.Services
                 new Customer()
                 {
                     Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca63b"),
-                    FirstName = "Frank",
-                    LastName = "Sinatra",
+                    FirstName = "Tom",
+                    LastName = "Hanks",
                     Phone = "555-124124"
                 },
                 new Customer()
@@ -29,11 +29,33 @@ namespace Sample.Services
                 },
                 new Customer()
                 {
-                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65e"),
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65d"),
                     FirstName = "Charlton",
                     LastName = "Heston",
                     Phone = "982-976781"
+                },
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65e"),
+                    FirstName = "Sean",
+                    LastName = "Penn",
+                    Phone = "372-9238781"
+                },
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65f"),
+                    FirstName = "Sean",
+                    LastName = "Connery",
+                    Phone = "973-9367334"
+                },
+                new Customer()
+                {
+                    Id = Guid.Parse("342ffcb6-211f-49ae-bae5-26cb2e1ca65f"),
+                    FirstName = "Al",
+                    LastName = "Pacino",
+                    Phone = "636-965366445"
                 }
+
             };
         }
 
